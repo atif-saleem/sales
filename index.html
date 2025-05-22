@@ -14,19 +14,19 @@
     <main>
       <div class="main-left">
         <div class="main-left-btn">
+          <span class="toggle-menu" onclick="showSidebar()"><i class="fa-solid fa-bars"></i></span>
           <ul class="main">
-            <li><button>DRESSES</button></li>
-            <li><button>BOLEROS & SHRUGS</button></li>
-            <li><button>SKIRTS</button></li>
-            <li><button>ACCESSORIES</button></li>
-            <li><button>KIDS</button></li>
-            <li><button>CLEARANCE</button></li>
-            <li><button>MATCHY-MATCHY</button></li>
-            <li><button>WINTER COLLECTION</button></li>
-            <li class="sale"><button>SALE</button></li>
-            <li><button></button></li>
-            <li><button>CUSTOMERS GALLERY</button></li>
-            <li><button>EXCLUSIVE OFFER</button></li>
+            <li onclick="hideMenu()"><button>DRESSES</button></li>
+            <li onclick="hideMenu()"><button>BOLEROS & SHRUGS</button></li>
+            <li onclick="hideMenu()"><button>SKIRTS</button></li>
+            <li onclick="hideMenu()"><button>ACCESSORIES</button></li>
+            <li onclick="hideMenu()"><button>KIDS</button></li>
+            <li onclick="hideMenu()"><button>CLEARANCE</button></li>
+            <li onclick="hideMenu()"><button>MATCHY-MATCHY</button></li>
+            <li onclick="hideMenu()"><button>WINTER COLLECTION</button></li>
+            <li  onclick="hideMenu()"><button>SALE</button></li>
+            <li onclick="hideMenu()"><button>CUSTOMERS GALLERY</button></li>
+            <li onclick="hideMenu()"><button>EXCLUSIVE OFFER</button></li>
           </ul>
         </div>
       </div>
@@ -70,7 +70,7 @@
                 <div class="para">Polka Dot (28)</div>
               </div>
               <div class="dettail">
-                <div class="logos"><img src="image/strips.png" alt="" /></div>
+                <div class="logos"><img src="image/strp.png" alt="" /></div>
                 <div class="para">Striped (2)</div>
               </div>
             </div>
@@ -146,7 +146,7 @@
               <div class="product">
                 <div class="display">
                   <div class="picture">
-                    <img src="image/sale01.png" alt="" />
+                    <img src="image/sale.png" alt="" />
                   </div>
                   <div class="discount-btn">
                     <button>SAVE <span class="disscount">16%</span></button>
@@ -154,15 +154,43 @@
                 </div>
                 <div class="price">
                   <p class="price-para">
-                    'Audrey' Vintage Divinity 50's Dress - lovery
+                    'Aura' Classic Clarity 50's Dress - Black
                   </p>
                   <div class="price-display">
                     <span class="original-price">
-                      <del>£38.99</del>
+                      <del>£33.99</del>
                     </span>
-                    <span class="current-price">£32.99</span>
+                    <span class="current-price">£30.99</span>
                   </div>
                 </div>
+              </div>
+          </div>
+        </div>
+        <div class="sale-rap margin-t">
+            <div class="right-sell-left">
+              <div class="product">
+                <div class="display">
+                  <div class="picture">
+                    <img src="image/sale2.png" alt="" />
+                  </div>
+                  <div class="discount-btn">
+                    <button>SAVE <span class="disscount">16%</span></button>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+            <div class="right-sell-right">
+              <div class="product">
+                <div class="display">
+                  <div class="picture">
+                    <img src="image/sale2.png" alt="" />
+                  </div>
+                  <div class="discount-btn">
+                    <button>SAVE <span class="disscount">16%</span></button>
+                  </div>
+                </div>
+               
               </div>
           </div>
         </div>
@@ -170,3 +198,17 @@
     </main>
   </body>
 </html>
+<script>
+  function showSidebar(){
+    const navbar=document.querySelector(".main-left-btn");
+    const toggleMenu=document.querySelector(".toggle-menu");
+    navbar.classList.toggle('active');
+    toggleMenu.innerHTML=navbar.classList.contains('active')?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>'
+  }
+  function hideMenu(){
+    const navbar=document.querySelector(".main-left-btn");
+    const toggleMenu=document.querySelector(".toggle-menu");
+    navbar.classList.remove('active');
+    toggleMenu.innerHTML='<i class="fa-solid fa-bars"></i>'
+  }
+</script>

@@ -24,7 +24,7 @@
             <li onclick="hideMenu()"><button>CLEARANCE</button></li>
             <li onclick="hideMenu()"><button>MATCHY-MATCHY</button></li>
             <li onclick="hideMenu()"><button>WINTER COLLECTION</button></li>
-            <li  onclick="hideMenu()"><button>SALE</button></li>
+            <li  onclick="hideMenu()" class="sale"><button>SALE</button></li>
             <li onclick="hideMenu()"><button>CUSTOMERS GALLERY</button></li>
             <li onclick="hideMenu()"><button>EXCLUSIVE OFFER</button></li>
           </ul>
@@ -35,7 +35,7 @@
           <div class="main-colors">
             <div class="color-head">
               <div class="color">COLOUR</div>
-              <div class="desh"></div>
+              <div class=" color" onclick="showColor()"><button>+</button></div>
             </div>
             <div class="color-show">
               <div class="color-show-divs color01"></div>
@@ -54,7 +54,8 @@
           <div class="pattren">
             <div class="pattren-head">
               <div class="color">PATTREN</div>
-              <div class="desh"></div>
+
+              <div class="desh" onclick="showItem()"><button>+</button></div>
             </div>
             <div class="pattren-down">
               <div class="dettail">
@@ -78,9 +79,9 @@
           <div class="sleeves pattren">
             <div class="pattren-head">
               <div class="color">SLEEVES</div>
-              <div class="desh"></div>
+              <div class="desh sleeve-btn" onclick="showSleeve()"><button>+</button></div>
             </div>
-            <div class="pattren-down">
+            <div class="pattren-down sleeve-down">
               <div class="dettail">
                 <div class="para">3/4 Sleeve (8)</div>
               </div>
@@ -199,6 +200,7 @@
   </body>
 </html>
 <script>
+  
   function showSidebar(){
     const navbar=document.querySelector(".main-left-btn");
     const toggleMenu=document.querySelector(".toggle-menu");
@@ -210,5 +212,58 @@
     const toggleMenu=document.querySelector(".toggle-menu");
     navbar.classList.remove('active');
     toggleMenu.innerHTML='<i class="fa-solid fa-bars"></i>'
+  }
+  function showItem(){
+    const item=document.querySelector(".pattren-down");
+    const pattrens=document.querySelector(".pattren")
+    console.log("object")
+    const btn=document.querySelector(".desh button");
+    item.classList.toggle('active');
+    if(item.classList.contains('active')){
+      pattrens.style.marginBottom="20px"
+      pattrens.style.paddingBottom="20px"
+    }else{
+      pattrens.style.marginBottom="0px"
+      pattrens.style.paddingBottom="0px"
+      
+    
+    }
+    
+    btn.innerHTML=item.classList.contains('active')?'_' : '+';
+
+  }
+  function showColor(){
+    const color=document.querySelector(".color-show");
+    const colorBtn=document.querySelector(".color button");
+    const colorDiv=document.querySelector(".main-colors")
+
+    color.classList.toggle('active');
+      if(color.classList.contains('active')){
+      colorDiv.style.marginBottom="20px"
+    }else{
+      colorDiv.style.marginBottom="13px"
+    }
+    colorBtn.innerHTML=color.classList.contains('active')?'_' : '+';
+    
+    
+  }
+    function showSleeve(){
+    const sleeve=document.querySelector(".sleeves");
+    const sleeveBtn=document.querySelector(".sleeve-btn button");
+    const sleeveDiv=document.querySelector(".sleeve-down")
+    console.log("helloee")
+
+    sleeveDiv.classList.toggle('active');
+      if(sleeveDiv.classList.contains('active')){
+      sleeve.style.marginBottom="20px"
+      sleeve.style.paddingBottom="20px"
+    }else{
+      sleeve.style.marginBottom="0px"
+      sleeve.style.paddingBottom="0px"
+
+    }
+    sleeveBtn.innerHTML=sleeveDiv.classList.contains('active')?'_' : '+';
+    
+    
   }
 </script>

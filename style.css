@@ -42,14 +42,18 @@ main {
   font-weight: 500;
   letter-spacing: 1px;
 }
-.main li button:hover{
+.main .sale button{
 padding: 14px 20px;
     background-color: #fff;
     border-radius: 25px;
     display: inline;
     color: #000;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     transition: 0,3s ease-in; 
+}
+.main li button:hover{
+   -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: none;
 }
 
 
@@ -61,7 +65,7 @@ padding: 14px 20px;
   width: 68%;
 }
 .main-colors {
-  margin-bottom: 24px;
+  margin-bottom: 13px;
   width: 100%;
 }
 .color-head {
@@ -70,15 +74,44 @@ padding: 14px 20px;
   font-size: 18px;
   justify-content: space-between;
 }
-.desh {
-  width: 1.9%;
-  border-bottom: 2px solid black;
+
+.color-show.active{
+display: flex;
 }
+
+.desh button{
+  border: none;
+  background: transparent;
+  font-weight: 900;
+  cursor: pointer;
+}
+.color button{
+    border: none;
+  background: transparent;
+  font-weight: 900;
+  cursor: pointer;
+}
+.pattren-down{
+  display: none;
+}
+.pattren-down.active {
+  display: block;
+}
+.sleeve-down.active {
+  display: block;
+}
+.sleeve-down{
+  display: none;
+}
+
 .color-show {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   padding: 10px 20px 20px 0px;
+}
+.color-show{
+  display: none;
 }
 .color-show-divs {
   height: 30px;
@@ -122,8 +155,8 @@ padding: 14px 20px;
   border: 1px solid black;
 }
 .pattren {
-  padding-bottom: 20px;
-  margin-bottom: 24px;
+  padding-bottom: 0px;
+  margin-bottom: 13px;
 }
 .pattren-head {
   font-weight: 800;
@@ -173,7 +206,7 @@ padding: 14px 20px;
 .stock button {
   border: none;
   background: transparent;
-  font-weight: 700;
+  font-weight: 800;
   font-style: 16px;
   cursor: pointer;
 }
@@ -302,6 +335,8 @@ padding: 14px 20px;
   .main-left {
     width: 100%;
     padding-right: 10px;
+    padding-top: 5px;
+    height: 30px;
   }
   .main-left .main-left-btn {
     width: 100%;
@@ -331,6 +366,6 @@ padding: 14px 20px;
     font-size: 13px;
   }
   .color-head{
-    font-size: 14px;
+    font-size: 18px;
   }
 }

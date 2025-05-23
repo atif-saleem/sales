@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
   </head>
   <body>
     <main>
@@ -35,7 +37,7 @@
           <div class="main-colors">
             <div class="color-head">
               <div class="color">COLOUR</div>
-              <div class=" color" onclick="showColor()"><button>+</button></div>
+              <div class="color" onclick="showColor()"><button>+</button></div>
             </div>
             <div class="color-show">
               <div class="color-show-divs color01"></div>
@@ -199,6 +201,10 @@
     </main>
   </body>
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+   integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
   
   function showSidebar(){
@@ -216,34 +222,50 @@
   function showItem(){
     const item=document.querySelector(".pattren-down");
     const pattrens=document.querySelector(".pattren")
-    console.log("object")
     const btn=document.querySelector(".desh button");
+    // item.style.height="0px"
+   
     item.classList.toggle('active');
     if(item.classList.contains('active')){
       pattrens.style.marginBottom="20px"
       pattrens.style.paddingBottom="20px"
+ setTimeout(() => {
+      item.style.height="140px"
+    }, 1000);
     }else{
       pattrens.style.marginBottom="0px"
       pattrens.style.paddingBottom="0px"
+       setTimeout(() => {
+      item.style.height="0px"
       
+    }, 1000);
     
     }
     
-    btn.innerHTML=item.classList.contains('active')?'_' : '+';
+    btn.innerHTML=item.classList.contains('active')?'-' : '+';
 
   }
   function showColor(){
     const color=document.querySelector(".color-show");
     const colorBtn=document.querySelector(".color button");
     const colorDiv=document.querySelector(".main-colors")
+    const divs=document.querySelector(".color-show-divs");
+       
 
     color.classList.toggle('active');
       if(color.classList.contains('active')){
       colorDiv.style.marginBottom="20px"
+      setTimeout(() => {
+      color.style.height="140px"
+    }, 1000);
     }else{
       colorDiv.style.marginBottom="13px"
+      setTimeout(() => {
+      color.style.height="0px"
+    }, 1000);
+      
     }
-    colorBtn.innerHTML=color.classList.contains('active')?'_' : '+';
+    colorBtn.innerHTML=color.classList.contains('active')?'-' : '+';
     
     
   }
@@ -257,13 +279,23 @@
       if(sleeveDiv.classList.contains('active')){
       sleeve.style.marginBottom="20px"
       sleeve.style.paddingBottom="20px"
+      setTimeout(() => {
+      sleeveDiv.style.height="140px"
+    }, 1000);
     }else{
       sleeve.style.marginBottom="0px"
       sleeve.style.paddingBottom="0px"
+      setTimeout(() => {
+      sleeveDiv.style.height="0px"
+    }, 1000);
 
     }
-    sleeveBtn.innerHTML=sleeveDiv.classList.contains('active')?'_' : '+';
+    sleeveBtn.innerHTML=sleeveDiv.classList.contains('active')?'-' : '+';
     
     
   }
 </script>
+
+
+
+

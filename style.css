@@ -77,6 +77,11 @@ padding: 14px 20px;
 
 .color-show.active{
 display: flex;
+overflow: hidden;
+transition:  width 2s;
+}
+.desh{
+  width: 11px;
 }
 
 .desh button{
@@ -85,6 +90,9 @@ display: flex;
   font-weight: 900;
   cursor: pointer;
 }
+.color{
+  width: 11px;
+}
 .color button{
     border: none;
   background: transparent;
@@ -92,26 +100,40 @@ display: flex;
   cursor: pointer;
 }
 .pattren-down{
-  display: none;
+  height: 0px;   
+  transition: 1s height;
+  display: block;
+  overflow: hidden;
 }
+
 .pattren-down.active {
+  overflow: hidden;
   display: block;
 }
 .sleeve-down.active {
   display: block;
+  overflow: hidden;
+
 }
 .sleeve-down{
-  display: none;
+  height: 0px;   
+  transition: 1s height;
+  display: block;
+  overflow: hidden;
 }
 
 .color-show {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  padding: 10px 20px 20px 0px;
+  /* padding: 10px 20px 20px 0px; */
+  margin-top: 10px;
 }
 .color-show{
-  display: none;
+  height: 0px;   
+  transition: 1s height;
+  display: flex;
+  overflow: hidden;
 }
 .color-show-divs {
   height: 30px;
@@ -368,5 +390,13 @@ display: flex;
   }
   .color-head{
     font-size: 18px;
+  }
+  .sort-btn{
+    width: 120px;
+  }
+}
+@media screen and (min-width:821px) and (max-width:1200px){
+  .sort-btn{
+    width: 150px;
   }
 }

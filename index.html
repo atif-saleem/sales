@@ -113,10 +113,22 @@
             <div class="stock sort">
               <h3>SORT</h3>
             </div>
-
-            <button class="sort-btn">
+           
+ 
+            <!-- <button class="sort-btn">
+              BESTSELLING <i class="fa fa-sort" aria-hidden="true"></i>
+            </button> -->
+            <div class="dropdown">
+ <button class="sort-btn">
               BESTSELLING <i class="fa fa-sort" aria-hidden="true"></i>
             </button>
+  <div class="dropdown-content">
+    <a href="#">LOW PRICE</a>
+    <a href="#">GOOD QUALITY</a>
+    <a href="#">HIGH RANK</a>
+  </div>
+</div>
+            
           </div>
         </div>
 
@@ -231,14 +243,14 @@
       pattrens.style.paddingBottom="20px"
  setTimeout(() => {
       item.style.height="140px"
-    }, 1000);
+    }, 100);
     }else{
       pattrens.style.marginBottom="0px"
       pattrens.style.paddingBottom="0px"
        setTimeout(() => {
       item.style.height="0px"
       
-    }, 1000);
+    }, 100);
     
     }
     
@@ -257,12 +269,12 @@
       colorDiv.style.marginBottom="20px"
       setTimeout(() => {
       color.style.height="140px"
-    }, 1000);
+    }, 100);
     }else{
       colorDiv.style.marginBottom="13px"
       setTimeout(() => {
       color.style.height="0px"
-    }, 1000);
+    }, 100);
       
     }
     colorBtn.innerHTML=color.classList.contains('active')?'-' : '+';
@@ -281,13 +293,13 @@
       sleeve.style.paddingBottom="20px"
       setTimeout(() => {
       sleeveDiv.style.height="140px"
-    }, 1000);
+    }, 100);
     }else{
       sleeve.style.marginBottom="0px"
       sleeve.style.paddingBottom="0px"
       setTimeout(() => {
       sleeveDiv.style.height="0px"
-    }, 1000);
+    }, 100);
 
     }
     sleeveBtn.innerHTML=sleeveDiv.classList.contains('active')?'-' : '+';
